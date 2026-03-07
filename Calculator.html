@@ -126,12 +126,14 @@ const value = button.textContent;
 if(value === "ON"){
 power = true;
 screen.value = "";
+screen.style.background = "aqua";
 return;
 }
 
 if(value === "OFF"){
 power = false;
 screen.value = "";
+screen.style.background = "black";
 return;
 }
 
