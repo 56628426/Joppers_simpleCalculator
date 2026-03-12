@@ -1,0 +1,121 @@
+
+p{
+  font-family: "Times New Roman", Times, serif;
+}
+body{
+  font-family: Arial, sans-serif;
+  background: azure;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  background:#665599;
+  padding:20px;
+  border-radius:20px;
+  width:320px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+#screen{
+  width:93%;
+  height:60px;
+  font-size:28px;
+  text-align:right;
+  padding:10px;
+  border-radius:15px;
+  border:2px solid floralwhite;
+  margin-bottom:15px;
+  background:aqua;
+}
+
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+button{
+  padding:18px;
+  font-size:18px;
+  border:none;
+  border-radius:15px;
+  cursor:pointer;
+  background:azure;
+  box-shadow:0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:active{
+  transform:scale(0.95);
+}
+
+.operator{
+  background:orange;
+}
+
+.control{
+  background:tan;
+}
+
+.equal{
+  background:greenyellow;
+  grid-column:span 3;
+}
+
+.plus{
+  grid-row:span 3;
+}
+/* Center the top heading */
+.main-title {
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+}
+
+/* This creates the side-by-side layout */
+.flex-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the whole group horizontally */
+    align-items: center;     /* Aligns text and calculator vertically */
+    gap: 50px;               /* Adds space between the text and calculator */
+    padding: 40px;
+}
+
+/* Limits the width of the paragraph so it doesn't stretch too far */
+.left-content {
+    max-width: 300px;
+}
+
+.left-content h3 {
+    margin-bottom: 10px;
+}
+/* Mobile Fix */
+@media (max-width: 768px){
+
+  body{
+    height:auto;
+    padding:20px;
+  }
+
+  .flex-wrapper{
+    flex-direction:column; /* stack text and calculator */
+    gap:20px;
+    padding:10px;
+  }
+
+  .container{
+    width:100%; /* full mobile width */
+    max-width:320px;
+  }
+
+  .left-content{
+    max-width:100%;
+    text-align:center;
+  }
+
+  #screen{
+    width:90%;
+  }
+}
